@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Birthday – ใส่รหัส</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="wrap" role="main" aria-label="หน้ากรอกรหัสสำหรับเข้า Birthday">
+    <div class="header" aria-hidden="true"></div>
+
+    <section class="card">
+      <div class="top">
+        <figure class="avatar" aria-label="รูปโปรไฟล์">
+          <!-- เปลี่ยนเป็นรูปจริง -->
+          <img src="your-photo.jpg" alt="รูปโปรไฟล์" />
+        </figure>
+
+        <div class="display" id="display" aria-live="polite">
+          <div class="dots" id="dots" aria-hidden="true">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+          <div class="actions">
+            <span class="chip" id="hint">ใส่รหัส 4 หลัก</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pad" role="group" aria-label="แป้นพิมพ์รหัส">
+        <button class="key" data-key="1">1</button>
+        <button class="key" data-key="2">2</button>
+        <button class="key" data-key="3">3</button>
+
+        <button class="key" data-key="4">4</button>
+        <button class="key" data-key="5">5</button>
+        <button class="key" data-key="6">6</button>
+
+        <button class="key" data-key="7">7</button>
+        <button class="key" data-key="8">8</button>
+        <button class="key" data-key="9">9</button>
+
+        <button class="key fn" data-action="clear">ล้าง</button>
+        <button class="key" data-key="0">0</button>
+        <button class="key fn ok" data-action="enter">ตกลง</button>
+      </div>
+    </section>
+
+    <div class="brand">
+      <small>(made with love)</small>
+      <div class="logo">eazypizzylife</div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
