@@ -133,3 +133,62 @@ body {
   line-height: 1.4;
   color: #555;
 }
+
+.printer {
+  margin-top: 20px;
+  text-align: center;
+  overflow: hidden;
+  max-height: 0;       /* ซ่อนตอนแรก */
+  transition: max-height 2s ease;
+}
+
+.printer.show {
+  max-height: 600px;   /* กำหนดความสูงพอให้รูปเลื่อนลงมา */
+}
+
+.slot {
+  width: 200px;
+  height: 8px;
+  background: #000;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.polaroid {
+  width: 120px;              /* ปรับขนาดเล็กลง */
+  margin: -4px auto;
+  display: block;
+  background: #000;          /* กรอบสีดำ */
+  padding: 10px;             /* ความหนากรอบ */
+  border-radius: 6px;        /* มุมมนเล็กน้อย */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* เงาแบบโพลารอยด์ */
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 2.5s ease, opacity 2.5s ease;
+}
+
+.printer.show .polaroid {
+  transform: translateY(0);
+  opacity: 1;
+}
+.polaroid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #1d1c1c;
+  padding-bottom: 30px;  /* ทำให้คล้ายกระดาษโพลารอยด์ */
+}
+
+.collect {
+  margin-top: 10px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #ff5c8a;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.collect:hover {
+  background: #e14c76;
+}
