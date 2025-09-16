@@ -44,8 +44,3 @@ document.querySelectorAll(".key").forEach(btn=>{
 });
 
 renderDots();
-
-document.getElementById("btnProfile").addEventListener("click", ()=>{
-  const card = document.getElementById("profileCard");
-  card.classList.toggle("show");
-});
