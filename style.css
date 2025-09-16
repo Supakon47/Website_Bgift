@@ -105,7 +105,14 @@ body{
 
 @media (max-width: 420px)  {
     .avatar {
-    width: 100px;
-    height: 100px;
+    flex:1;
+    max-width:120px;
+    min-width: 120px;
+    aspect-ratio:1/1;
+    border-radius:999px;
+    overflow:hidden;
+    border:6px dotted #fff;
+    align-items:center;
+    justify-content: center;
   }
 }
