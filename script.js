@@ -1,4 +1,4 @@
-const CORRECT_PIN = "0925";
+const CORRECT_PIN = "0610";
 const PIN_LENGTH = CORRECT_PIN.length;
 const NEXT_URL = "birthday.html";
 
