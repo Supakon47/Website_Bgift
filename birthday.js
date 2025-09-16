@@ -32,10 +32,15 @@ collectBtn.addEventListener("click", () => {
     overlay.classList.add("exit");
   }, 2500);
 
+  setTimeout(() => {
+    twentyCard.classList.remove("show");
+    polaroid.style.opacity = "0";
+  }, 500);
+
   // reset กลับมาหน้าปกติ
   setTimeout(() => {
     overlay.classList.remove("show","exit");
     twentyCard.classList.remove("show");
     polaroid.style.opacity = "0";
-  }, 4000);
+  }, 1700);
 });

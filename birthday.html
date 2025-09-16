@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Happy Birthday</title>
   <link rel="stylesheet" href="birthday.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
   <main class="wrap">
@@ -26,9 +27,9 @@
       </div>
 
       <div class="buttons">
-        <button class="btn" id="btnProfile">♡ Profile</button>
-        <button class="btn" id="btnTwenty">♡ Twenty</button>
-        <button class="btn">♡ Read Me</button>
+        <button class="btn" id="btnProfile"><i class="fa-solid fa-user"></i> Profile</button>
+        <button class="btn" id="btnTwenty"><i class="fa-solid fa-camera-retro"></i> Twenty</button>
+        <button class="btn"><i class="fa-solid fa-cake-candles"></i> Read Me</button>
       </div>
 
       <div class="card hidden" id="profileCard">
@@ -48,7 +49,8 @@
        <div class="printer" id="twentyCard">
             <div class="slot"></div>
                 <div class="polaroid" id="polaroid">
-                    <img src="pic/profile2.png" alt="Twenty" class="photo">
+                    <img src="pic/profile2.jpg" alt="Twenty" class="photo">
+                    <img src="pic/pic2.jpg" alt="Twenty" class="photo">
                     <img src="pic/pic1.png" alt="Twenty" class="photo">
                 </div>
             <button class="collect" id="collectBtn">COLLECT</button>
@@ -56,7 +58,8 @@
 
         <div class="overlay" id="overlay">
             <div class="overlay-content" id="overlayContent">
-               <img src="pic/pic1.png" alt="Twenty" class="photo big">
+               <img src="pic/profile2.jpg" alt="Twenty" class="photo big">
+               <img src="pic/pic2.jpg" alt="Twenty" class="photo">
                 <img src="pic/pic1.png" alt="Twenty" class="photo big">
             </div>
         </div>
