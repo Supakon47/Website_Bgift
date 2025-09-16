@@ -34,6 +34,7 @@ function submitPin(){
       display.textContent="";
       display.style.color="";
       clearAll();
+      renderDots();
     },1000);
   }
 }

@@ -110,8 +110,8 @@ body{
   }
     .avatar {
     flex:1;
-    max-width:120px;
-    min-width: 120px;
+    max-width:130px;
+    min-width: 130px;
     aspect-ratio:1/1;
     border-radius:999px;
     overflow:hidden;
