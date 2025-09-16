@@ -3,7 +3,7 @@ const PIN_LENGTH = CORRECT_PIN.length;
 const NEXT_URL = "birthday.html";
 
 const dots = document.getElementById("dots").children;
-const display = document.getElementById("display");
+const message = document.getElementById("message");
 let input = "";
 
 function renderDots(){
@@ -18,24 +18,21 @@ function pushDigit(d){
 }
 
 function clearAll(){
-  input="";
+  input = "";
   renderDots();
+  message.textContent = "";
+  message.className = "message"; // reset
 }
 
 function submitPin(){
   if(input === CORRECT_PIN){
-    display.textContent = "Welcome!";
-    display.style.color = "green";
-    setTimeout(()=>location.href=NEXT_URL,1200);
+    message.textContent = "Welcome!";
+    message.className = "message success";
+    setTimeout(()=> location.href = NEXT_URL,1200);
   } else {
-    display.textContent = "Wrong!";
-    display.style.color = "red";
-    setTimeout(()=>{
-      display.textContent="";
-      display.style.color="";
-      clearAll();
-      renderDots();
-    },1000);
+    message.textContent = "Wrong!";
+    message.className = "message error";
+    setTimeout(clearAll,1000);
   }
 }
 
