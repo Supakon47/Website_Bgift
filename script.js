@@ -22,14 +22,17 @@ function clearAll(){
   renderDots();
   message.textContent = "";
   message.className = "message"; // reset
+  document.getElementById("dots").style.display = "flex";  // show dots back
 }
 
 function submitPin(){
   if(input === CORRECT_PIN){
+    document.getElementById("dots").style.display = "none";   // hide dots
     message.textContent = "Welcome!";
     message.className = "message success";
     setTimeout(()=> location.href = NEXT_URL,1200);
   } else {
+    document.getElementById("dots").style.display = "none";   // hide dots
     message.textContent = "Wrong!";
     message.className = "message error";
     setTimeout(clearAll,1000);
