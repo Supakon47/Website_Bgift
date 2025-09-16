@@ -171,6 +171,13 @@ body {
   transform: translateY(0);
   opacity: 1;
 }
+
+.polaroid.exit {
+  transform: translateY(-150%);
+  opacity: 0;
+  transition: transform 1.5s ease-in, opacity 1.5s ease-in;
+}
+
 .polaroid img {
   display: block;
   width: 100%;
