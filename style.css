@@ -22,7 +22,10 @@ body{
   padding:40px 16px;
 }
 
-.wrap{ width:100%; max-width:420px; }
+.wrap{ 
+    width:100%; 
+    max-width:420px; 
+}
 
 .header{
   background:var(--panel);
@@ -99,3 +102,10 @@ body{
 .key:active{background:var(--button-press);}
 
 .logo{font-family:"Didot",serif; font-style:italic; font-size:22px;}
+
+@media (max-width: 420px)  {
+    .avatar {
+    width: 100px;
+    height: 100px;
+  }
+}
