@@ -1,0 +1,134 @@
+:root {
+  --bg:#fff5fa;
+  --card:#ffd6e9;
+  --panel:#f9bed7;
+  --accent:#ff7fb0;
+  --text:#333;
+  --shadow:0 6px 16px rgba(0,0,0,.08);
+  --radius:18px;
+}
+
+*{box-sizing:border-box}
+body {
+  margin:0;
+  background:var(--bg);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  display:flex;
+  justify-content:center;
+  padding:40px 16px;
+}
+
+.wrap {
+  width:100%;
+  max-width:420px;
+}
+
+.header {
+  background:var(--panel);
+  border-radius:var(--radius);
+  padding:12px;
+  text-align:center;
+  font-weight:bold;
+  color:var(--text);
+  margin-bottom:16px;
+}
+
+.card {
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:12px;
+  box-shadow:var(--shadow);
+  text-align:center;
+}
+
+.image-box {
+  position:relative;
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.image-box img {
+  width:100%;
+  display:block;
+}
+.overlay {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding:16px;
+  color:white;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent 60%);
+  text-align:left;
+}
+.overlay h2 {
+  margin:0 0 6px;
+}
+.overlay p {
+  margin:0;
+  font-size:14px;
+  line-height:1.4;
+}
+
+.buttons {
+  display:flex;
+  justify-content:space-around;
+  margin-top:14px;
+}
+.btn {
+  background:white;
+  border-radius:12px;
+  padding:8px 14px;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:500;
+  color:var(--accent);
+  box-shadow:var(--shadow);
+  transition: background .2s;
+}
+.btn:hover {
+  background:#fff0f6;
+}
+/* การ์ดซ่อน */
+.hidden {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.6s ease;
+}
+
+.card.show {
+  max-height: 600px;   /* กำหนดความสูงพอให้ขยาย */
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.profile-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.profile-row img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+}
+
+.profile-row .text {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-row h3 {
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+
+.profile-row p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
