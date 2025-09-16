@@ -1,9 +1,11 @@
 const btnProfile = document.getElementById("btnProfile");
 const profileCard = document.getElementById("profileCard");
+
 const btnTwenty = document.getElementById("btnTwenty");
 const twentyCard = document.getElementById("twentyCard");
 const collectBtn = document.getElementById("collectBtn");
 const polaroid = document.getElementById("polaroid");
+const overlay = document.getElementById("overlay");
 
 btnProfile.addEventListener("click", () => {
   profileCard.classList.toggle("show");
@@ -23,8 +25,17 @@ btnTwenty.addEventListener("click", () => {
 });
 
 collectBtn.addEventListener("click", () => {
-  polaroid.classList.add("exit"); // เล่น animation ออก
+  overlay.classList.add("show");
+
+  // หลัง 2.5s ให้ overlay ค่อย ๆ เลื่อนหาย
   setTimeout(() => {
-    twentyCard.classList.remove("show"); // ซ่อน printer
-  }, 1500); // ให้เวลา animation เล่นก่อนค่อยซ่อน
+    overlay.classList.add("exit");
+  }, 2500);
+
+  // reset กลับมาหน้าปกติ
+  setTimeout(() => {
+    overlay.classList.remove("show","exit");
+    twentyCard.classList.remove("show");
+    polaroid.style.opacity = "0";
+  }, 4000);
 });

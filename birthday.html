@@ -12,8 +12,11 @@
 
     <section class="card">
       <div class="image-box">
-        <img src="pic/profile2.jpg" alt="birthday" />
-        <div class="overlay">
+        <video autoplay loop muted playsinline>
+            <source src="pic/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="word_overlay">
           <h2>hi, twenties!</h2>
           <p>
             Wishing you a day filled with love, joy and 💖 <br/>
@@ -44,11 +47,18 @@
 
        <div class="printer" id="twentyCard">
             <div class="slot"></div>
-                <div class="polaroid">
-                    <img src="pic/pic1.png" alt="Twenty" class="photo">
+                <div class="polaroid" id="polaroid">
+                    <img src="pic/profile2.png" alt="Twenty" class="photo">
                     <img src="pic/pic1.png" alt="Twenty" class="photo">
                 </div>
             <button class="collect" id="collectBtn">COLLECT</button>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div class="overlay-content" id="overlayContent">
+               <img src="pic/pic1.png" alt="Twenty" class="photo big">
+                <img src="pic/pic1.png" alt="Twenty" class="photo big">
+            </div>
         </div>
 
     </section>

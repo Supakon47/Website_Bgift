@@ -46,11 +46,12 @@ body {
   border-radius:var(--radius);
   overflow:hidden;
 }
-.image-box img {
+.image-box video {
   width:100%;
   display:block;
+  border-radius: var(--radius);
 }
-.overlay {
+.word_overlay {
   position:absolute;
   bottom:0;
   left:0;
@@ -184,6 +185,45 @@ body {
   height: auto;
   background: #1d1c1c;
   padding-bottom: 30px;  /* ทำให้คล้ายกระดาษโพลารอยด์ */
+}
+
+.overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease, visibility 0.5s;
+  z-index: 999;
+}
+
+.overlay.show {
+  visibility: visible;
+  opacity: 1;
+}
+.overlay-content {
+  display: flex;
+  flex-direction: column;   /* บังคับเรียงแนวตั้ง */
+  align-items: center;      /* จัดกลาง */
+}
+
+.overlay-content img {
+  width: 60%;       /* ขนาดใหญ่ */
+  max-width: 300px;
+  border: 10px solid #000;
+  border-radius: 6px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  transform: translateY(0);
+  transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+/* animation ตอนหาย */
+.overlay.exit img {
+  transform: translateY(-150%);
+  opacity: 0;
 }
 
 .collect {
