@@ -7,6 +7,9 @@ const collectBtn = document.getElementById("collectBtn");
 const polaroid = document.getElementById("polaroid");
 const overlay = document.getElementById("overlay");
 
+const btnReadMe = document.getElementById("btnReadMe");
+const readmeCard = document.getElementById("readmeCard");
+
 btnProfile.addEventListener("click", () => {
   profileCard.classList.toggle("show");
   profileCard.classList.toggle("hidden");
@@ -43,4 +46,13 @@ collectBtn.addEventListener("click", () => {
     twentyCard.classList.remove("show");
     polaroid.style.opacity = "0";
   }, 1700);
+});
+
+btnReadMe.addEventListener("click", () => {
+  readmeCard.classList.toggle("show");
+  readmeCard.classList.toggle("hidden");
+
+  if (readmeCard.classList.contains("show")) {
+    readmeCard.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 });

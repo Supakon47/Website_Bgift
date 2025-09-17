@@ -239,3 +239,35 @@ body {
 .collect:hover {
   background: #e14c76;
 }
+
+.readme-row {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.readme-row img {
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 4px dotted #fff;
+  box-shadow: var(--shadow);
+}
+
+.readme-row .text {
+  flex: 1;
+  text-align: left;
+}
+
+.readme-row h3 {
+  margin: 0 0 6px;
+  color: var(--accent);
+}
+
+.readme-row p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
