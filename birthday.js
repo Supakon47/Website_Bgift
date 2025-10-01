@@ -10,6 +10,8 @@ const overlay = document.getElementById("overlay");
 const btnReadMe = document.getElementById("btnReadMe");
 const readmeCard = document.getElementById("readmeCard");
 
+const audio = document.getElementById("music");
+
 btnProfile.addEventListener("click", () => {
   profileCard.classList.toggle("show");
   profileCard.classList.toggle("hidden");
@@ -56,3 +58,8 @@ btnReadMe.addEventListener("click", () => {
     readmeCard.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 });
+
+audio.loop = true;   // ตั้งค่าให้เล่นซ้ำ
+audio.autoplay = true;  // ให้เล่นอัตโนมัติ
+audio.volume = 1.0;
+audio.play();
