@@ -61,5 +61,11 @@ btnReadMe.addEventListener("click", () => {
 
 audio.loop = true;   // ตั้งค่าให้เล่นซ้ำ
 audio.autoplay = true;  // ให้เล่นอัตโนมัติ
-audio.volume = 1.0;
+audio.muted = false;
+audio.volume = 0.2;
+  document.body.addEventListener("click", () => {
+    if (music.paused) {
+      music.play();
+    }
+  });
 audio.play();
